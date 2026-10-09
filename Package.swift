@@ -55,7 +55,6 @@ let package = Package(
         .package(url: "https://github.com/AliSoftware/OHHTTPStubs", from: "9.1.0"),
         .package(url: "https://github.com/pointfreeco/swift-snapshot-testing.git", from: "1.18.1"),
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
-        .package(url: "https://github.com/mapbox/mapbox-navigation-cpp-ios.git", exact: navsdkVersion),
     ],
     targets: [
         .target(
@@ -187,13 +186,6 @@ let package = Package(
             dependencies: [
                 "MapboxDirections",
                 .product(name: "ArgumentParser", package: "swift-argument-parser")
-            ]),
-        .target(
-            name: "MapboxNavigationCppRoadCameras",
-            dependencies: [
-                .product(name: "MapboxNavigationCpp", package: "mapbox-navigation-cpp-ios"),
-                .product(name: "MapboxMaps", package: mapboxMapsPackage),
-            ]
-        )
+            ])
     ]
 )
