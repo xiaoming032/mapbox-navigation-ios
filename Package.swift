@@ -38,12 +38,6 @@ let package = Package(
             name: "_MapboxNavigationTestKit",
             targets: ["_MapboxNavigationTestKit"]
         ),
-        .library(
-            name: "MapboxNavigationCppRoadCameras",
-            targets: [
-                "MapboxNavigationCppRoadCameras",
-            ]
-        ),
         .executable(
             name: "mapbox-directions-swift",
             targets: ["MapboxDirectionsCLI"]),
